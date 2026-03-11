@@ -1,0 +1,379 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[](red)\
+$os\
+$username\
+[](bg:peach fg:red)\
+$directory\
+[](bg:yellow fg:peach)\
+$git_branch\
+$git_status\
+[](fg:yellow bg:green)\
+$c\
+$rust\
+$golang\
+$nodejs\
+$php\
+$java\
+$kotlin\
+$haskell\
+$python\
+[](fg:green bg:sapphire)\
+$conda\
+[](fg:sapphire bg:lavender)\
+$time\
+[ ](fg:lavender)\
+$cmd_duration\
+$line_break\
+$character"""
+
+palette = 'dracula'
+
+[os]
+disabled = false
+style = "bg:red fg:crust"
+
+[os.symbols]
+Windows = ""
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+AOSC = ""
+Arch = "󰣇"
+Artix = "󰣇"
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+
+[username]
+show_always = true
+style_user = "bg:red fg:crust"
+style_root = "bg:red fg:crust"
+format = '[ $user]($style)'
+
+[directory]
+style = "bg:peach fg:crust"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"~" = " "
+"Desktop" = " "
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Video" = " "
+"Pictures" = " "
+"Musics" = " "
+"Videos" = " "
+"Developer" = "󰲋 "
+"Workspace" = "󰕮 "
+
+[git_branch]
+symbol = ""
+style = "bg:yellow"
+format = '[[ $symbol $branch ](fg:crust bg:yellow)]($style)'
+
+[git_status]
+style = "bg:yellow"
+format = '[[($all_status$ahead_behind )](fg:crust bg:yellow)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+
+[c]
+symbol = " "
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+
+[php]
+symbol = ""
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+
+[java]
+symbol = " "
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+
+[kotlin]
+symbol = ""
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+
+[haskell]
+symbol = ""
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+
+[python]
+symbol = ""
+style = "bg:green"
+format = '[[ $symbol( $version)(\(#$virtualenv\)) ](fg:crust bg:green)]($style)'
+
+[docker_context]
+symbol = ""
+style = "bg:sapphire"
+format = '[[ $symbol( $context) ](fg:crust bg:sapphire)]($style)'
+
+[conda]
+symbol = "  "
+style = "fg:crust bg:sapphire"
+format = '[$symbol$environment ]($style)'
+ignore_base = false
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:lavender"
+format = '[[  $time ](fg:crust bg:lavender)]($style)'
+
+[line_break]
+disabled = false
+
+[character]
+disabled = false
+success_symbol = '[󰘧](bold fg:green)'
+error_symbol = '[󰘧](bold fg:red)'
+vimcmd_symbol = '[❮](bold fg:green)'
+vimcmd_replace_one_symbol = '[❮](bold fg:lavender)'
+vimcmd_replace_symbol = '[❮](bold fg:lavender)'
+vimcmd_visual_symbol = '[❮](bold fg:yellow)'
+
+[cmd_duration]
+show_milliseconds = true
+format = " in $duration "
+style = "bg:lavender"
+disabled = false
+show_notifications = true
+min_time_to_notify = 1000
+
+
+# palette说明
+# 可用名称：
+# catppuccin_mocha  —— 暗色系，Catppuccin Mocha
+# catppuccin_frappe —— 暗色系，Catppuccin Frappe
+# catppuccin_latte  —— 浅色系，Catppuccin Latte
+# catppuccin_macchiato —— 暗色系，Catppuccin Macchiato
+# dracula           —— 暗色系，Dracula Theme
+# nord              —— 暗色系，Nord Theme
+
+[palettes.catppuccin_mocha]
+rosewater = "#f5e0dc"
+flamingo = "#f2cdcd"
+pink = "#f5c2e7"
+mauve = "#cba6f7"
+red = "#f38ba8"
+maroon = "#eba0ac"
+peach = "#fab387"
+yellow = "#f9e2af"
+green = "#a6e3a1"
+teal = "#94e2d5"
+sky = "#89dceb"
+sapphire = "#74c7ec"
+blue = "#89b4fa"
+lavender = "#b4befe"
+text = "#cdd6f4"
+subtext1 = "#bac2de"
+subtext0 = "#a6adc8"
+overlay2 = "#9399b2"
+overlay1 = "#7f849c"
+overlay0 = "#6c7086"
+surface2 = "#585b70"
+surface1 = "#45475a"
+surface0 = "#313244"
+base = "#1e1e2e"
+mantle = "#181825"
+crust = "#11111b"
+
+[palettes.catppuccin_frappe]
+rosewater = "#f2d5cf"
+flamingo = "#eebebe"
+pink = "#f4b8e4"
+mauve = "#ca9ee6"
+red = "#e78284"
+maroon = "#ea999c"
+peach = "#ef9f76"
+yellow = "#e5c890"
+green = "#a6d189"
+teal = "#81c8be"
+sky = "#99d1db"
+sapphire = "#85c1dc"
+blue = "#8caaee"
+lavender = "#babbf1"
+text = "#c6d0f5"
+subtext1 = "#b5bfe2"
+subtext0 = "#a5adce"
+overlay2 = "#949cbb"
+overlay1 = "#838ba7"
+overlay0 = "#737994"
+surface2 = "#626880"
+surface1 = "#51576d"
+surface0 = "#414559"
+base = "#303446"
+mantle = "#292c3c"
+crust = "#232634"
+
+[palettes.catppuccin_latte]
+rosewater = "#dc8a78"
+flamingo = "#dd7878"
+pink = "#ea76cb"
+mauve = "#8839ef"
+red = "#d20f39"
+maroon = "#e64553"
+peach = "#fe640b"
+yellow = "#df8e1d"
+green = "#40a02b"
+teal = "#179299"
+sky = "#04a5e5"
+sapphire = "#209fb5"
+blue = "#1e66f5"
+lavender = "#7287fd"
+text = "#4c4f69"
+subtext1 = "#5c5f77"
+subtext0 = "#6c6f85"
+overlay2 = "#7c7f93"
+overlay1 = "#8c8fa1"
+overlay0 = "#9ca0b0"
+surface2 = "#acb0be"
+surface1 = "#bcc0cc"
+surface0 = "#ccd0da"
+base = "#eff1f5"
+mantle = "#e6e9ef"
+crust = "#dce0e8"
+
+[palettes.catppuccin_macchiato]
+rosewater = "#f4dbd6"
+flamingo = "#f0c6c6"
+pink = "#f5bde6"
+mauve = "#c6a0f6"
+red = "#ed8796"
+maroon = "#ee99a0"
+peach = "#f5a97f"
+yellow = "#eed49f"
+green = "#a6da95"
+teal = "#8bd5ca"
+sky = "#91d7e3"
+sapphire = "#7dc4e4"
+blue = "#8aadf4"
+lavender = "#b7bdf8"
+text = "#cad3f5"
+subtext1 = "#b8c0e0"
+subtext0 = "#a5adcb"
+overlay2 = "#939ab7"
+overlay1 = "#8087a2"
+overlay0 = "#6e738d"
+surface2 = "#5b6078"
+surface1 = "#494d64"
+surface0 = "#363a4f"
+base = "#24273a"
+mantle = "#1e2030"
+crust = "#181926"
+
+[palettes.dracula]
+rosewater = "#ff79c6"      # pink
+flamingo = "#ff92df"      # bright_magenta
+pink = "#ff79c6"          # pink
+mauve = "#bd93f9"         # purple
+red = "#ff5555"           # red
+maroon = "#ff6e6e"        # bright_red
+peach = "#ffb86c"         # orange
+yellow = "#f1fa8c"        # yellow
+green = "#50fa7b"         # green
+teal = "#8be9fd"          # cyan
+sky = "#a4ffff"           # bright_cyan
+sapphire = "#d6acff"      # bright_blue
+blue = "#6272a4"          # comment/bright_black
+lavender = "#b4befe"      # catppuccin lavender (未找到dracula原色，取catppuccin色)
+text = "#f8f8f2"          # foreground
+subtext1 = "#ffffff"      # bright_white
+subtext0 = "#f8f8f2"      # foreground
+overlay2 = "#44475a"      # current/selection
+overlay1 = "#44475a"      # current/selection
+overlay0 = "#44475a"      # current/selection
+surface2 = "#282a36"      # background
+surface1 = "#282a36"      # background
+surface0 = "#282a36"      # background
+base = "#282a36"          # background
+mantle = "#44475a"        # current/selection
+crust = "#282a36"         # background
+
+[palettes.nord]
+rosewater = "#8fbcbb"      # rosewater
+flamingo = "#88c0d0"      # flamingo
+pink = "#b48ead"           # pink
+mauve = "#b48ead"          # mauve
+red = "#bf616a"            # red
+maroon = "#bf616a"         # maroon
+peach = "#d08770"          # peach
+yellow = "#ebcb8b"         # yellow
+green = "#a3be8c"          # green
+teal = "#8fbcbb"           # teal
+sky = "#81a1c1"            # sky
+sapphire = "#5e81ac"       # sapphire
+blue = "#5e81ac"           # blue
+lavender = "#eceff4"       # lavender
+text = "#d8dee9"           # text
+subtext1 = "#e5e9f0"       # subtext1
+subtext0 = "#eceff4"       # subtext0
+overlay2 = "#4c566a"       # overlay2
+overlay1 = "#434c5e"       # overlay1
+overlay0 = "#3b4252"       # overlay0
+surface2 = "#2e3440"       # surface2
+surface1 = "#3b4252"       # surface1
+surface0 = "#434c5e"       # surface0
+base = "#2e3440"           # base
+mantle = "#3b4252"         # mantle
+crust = "#4c566a"          # crust
+
+[palettes.one_dark_pro]
+rosewater = "#e06c75"      # pink/red
+flamingo = "#be5046"       # flamingo
+pink = "#e06c75"           # pink
+mauve = "#c678dd"          # mauve/purple
+red = "#e06c75"            # red
+maroon = "#be5046"         # maroon
+peach = "#d19a66"          # peach/orange
+yellow = "#e5c07b"         # yellow
+green = "#98c379"          # green
+teal = "#56b6c2"           # teal/cyan
+sky = "#61afef"            # sky/blue
+sapphire = "#282c34"       # sapphire/background
+blue = "#61afef"           # blue
+lavender = "#abb2bf"       # lavender/foreground
+text = "#abb2bf"           # text/foreground
+subtext1 = "#828997"       # subtext1
+subtext0 = "#5c6370"       # subtext0
+overlay2 = "#3e4451"       # overlay2
+overlay1 = "#2c323c"       # overlay1
+overlay0 = "#21252b"       # overlay0
+surface2 = "#282c34"       # surface2
+surface1 = "#21252b"       # surface1
+surface0 = "#2c323c"       # surface0
+base = "#282c34"           # base
+mantle = "#21252b"         # mantle
+crust = "#1c1f24"          # crust
