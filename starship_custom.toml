@@ -393,7 +393,7 @@ Windows = "󰍲 "
 [package]
 symbol = "󰏗 "
 format = '[ $symbol$version]($style)'
-disabled = true # Disabled by default
+disabled = false # Disabled by default
 
 [perl]
 symbol = " "
