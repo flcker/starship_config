@@ -1,12 +1,12 @@
 # Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
 
+# timeout settings
+command_timeout = 10000  # 设置超时时间为10秒
+scan_timeout = 1000  # 单位是毫秒，这里设为 1000ms
+
 # Inserts a blank line between shell prompts
 add_newline = true
-
-command_timeout = 10000  # 设置超时时间为10秒
-
-scan_timeout = 1000  # 单位是毫秒，这里设为 1000ms
 
 # format = '$all'
 # 相当于
@@ -156,9 +156,9 @@ read_only = " 󰌾"
 
 ################################################################################
 # [key]存在冲突的需要合并
-# symbol: Nerd Font Symbols Preset (Nerd字体符号预设 https://starship.rs/config/#nerd-font-symbols) 
+# symbol: Nerd Font Symbols Preset (Nerd字体符号预设 https://starship.rs/config/#nerd-font-symbols)
 # format: Bracketed Segments Preset (括号段预设 https://starship.rs/config/#bracketed-segments)
-# 按key 排序 [A~Z] [a~z] [0~9] [其他]  
+# 按key 排序 [A~Z] [a~z] [0~9] [其他]
 [aws]
 symbol = "  "
 format = '[ $symbol($profile)(\($region\))( $duration)]($style)'
@@ -473,4 +473,3 @@ format = '[ $symbol($version)]($style)'
 [zig]
 symbol = " "
 format = '[ $symbol($version)]($style)'
-

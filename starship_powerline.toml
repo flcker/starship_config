@@ -1,5 +1,9 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
+# timeout settings
+command_timeout = 10000  # 设置超时时间为10秒
+scan_timeout = 1000  # 单位是毫秒，这里设为 1000ms
+
 format = """
 [](red)\
 $os\
@@ -28,7 +32,7 @@ $cmd_duration\
 $line_break\
 $character"""
 
-palette = 'dracula'
+palette = 'tokyonight'
 
 [os]
 disabled = false
@@ -378,3 +382,31 @@ surface0 = "#2c323c"       # surface0
 base = "#282c34"           # base
 mantle = "#21252b"         # mantle
 crust = "#1c1f24"          # crust
+
+[palettes.tokyonight]
+rosewater = "#f5e0dc"   # rosewater
+flamingo = "#f5c2e7"    # flamingo
+pink = "#f5c2e7"        # pink
+mauve = "#cba6f7"       # mauve
+red = "#f38ba8"        # red
+maroon = "#eba0ac"     # maroon
+peach = "#fab387"      # peach
+yellow = "#f9e2af"     # yellow
+green = "#a6e3a1"      # green
+teal = "#94e2d5"       # teal
+sky = "#89dceb"        # sky
+sapphire = "#74c7ec"   # sapphire
+blue = "#89b4fa"       # blue
+lavender = "#b4befe"   # lavender
+text = "#cdd6f4"       # text
+subtext1 = "#bac2de"   # subtext1
+subtext0 = "#a6adc8"   # subtext0
+overlay2 = "#9399b2"   # overlay2
+overlay1 = "#7f849c"   # overlay1
+overlay0 = "#6c7086"   # overlay0
+surface2 = "#585b70"   # surface2
+surface1 = "#45475a"   # surface1
+surface0 = "#313244"   # surface0
+base = "#1e1e2e"       # base
+mantle = "#181825"     # mantle
+crust = "#11111b"      # crust
