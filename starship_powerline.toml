@@ -4,6 +4,9 @@
 command_timeout = 10000  # 设置超时时间为10秒
 scan_timeout = 1000  # 单位是毫秒，这里设为 1000ms
 
+# Inserts a blank line between shell prompts
+add_newline = true
+
 format = """
 [](red)\
 $os\
